@@ -1,0 +1,21 @@
+# Waveguide taper file
+
+#############################################################################
+## Part 1: sweep over waveguide taper shape
+clear;
+
+# run the sweep over taper width
+sweepname="slope";
+runsweep(sweepname);
+
+# collect sweep results
+s_matrix = getsweepresult(sweepname,"s_param");
+usr_s_matrix = getattribute(s_matrix,"user s matrix");
+m = getparameter(s_matrix,"m");
+
+# calculate transmission
+s_21 = usr_s_matrix(2,1,1:length(m));
+trans = pinch(abs(s_21)^2);
+
+plot(m,trans,"m","T");
+

@@ -1,0 +1,27 @@
+# simulation settings
+lambda = 1.55e-6;
+n_modes = 50;
+
+# apply simulation settings
+switchtolayout;
+setnamed("FEEM", "wavelength", lambda);
+setnamed("FEEM", "number of trial modes", n_modes);
+setnamed("FEEM", "edges per wavelength", 5);
+setnamed("FEEM", "polynomial order", 3);
+
+# run simulations
+run;
+
+# collect simulation results
+mode_profiles = getresult("FEEM", "fields");
+mode_properties = getresult("FEEM", "modeproperties");
+
+# visualize mode profile
+visualize(mode_profiles);
+
+x=1;
+# print mode properties to Script Prompt
+?"Effective index (mode 1): "+num2str(real(mode_properties.neff(x))) + " + " + num2str(imag(mode_properties.neff(x))) + "i";
+?"Loss (mode 1): "+num2str(real(mode_properties.loss(x))) + " dB/cm";
+
+switchtolayout;

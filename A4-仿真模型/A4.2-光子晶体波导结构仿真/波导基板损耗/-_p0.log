@@ -1,0 +1,25 @@
+Ansys Lumerical 2023 R1 Finite Element Eigenmode Solver Version 7.11.3262 (Windows 64bit)
+ expires (month/day/year): 12/31/2035
+using config file: Ansys Licensing set with ANSYSLMD_LICENSE_FILE
+license host: 1055@localhost
+current time: 周五 3月 10 17:23:57 2023
+Running on host: zx
+Running ldev file: C:\Program Files\Lumerical\v231\bin\feem-engine-msmpi.exe G:/IntegratedWaveguideOnChip/Waveguide Substrate Loss (FEEM)/-.ldev -remote -shared-solve-license QU5TWVNfTElDRU5TSU5HX0NPTlRFWFRfREFUQT08QU5TWVNfTElDRU5TSU5HX0NPTlRFWFRfREFUQT48SUQ+NzJkYTdhZGYtMzhjMC00NDQzLWE0YjctNjM5NzAwYmMwN2EzPC9JRD48VFlQRT5IUENfUEFSQU1FVFJJQzwvVFlQRT48TkFNRT5IUEMgUGFyYW1ldHJpYzwvTkFNRT48SEFORExFUj4xNDMxOUB6eDwvSEFORExFUj48L0FOU1lTX0xJQ0VOU0lOR19DT05URVhUX0RBVEE+Cg==
+  ...G:/IntegratedWaveguideOnChip/Waveguide Substrate Loss (FEEM)/-.ldev loaded
+Remote execution (remote argument) set to true.
+Generating mesh.
+Mesh generation complete (0s)
+  + vertices: 100
+  + elements: 158
+All processes are communicating and ready to proceed to simulation...
+Starting solver.
+Setting number of threads: 1
+.Loading mesh.
+Adding materials.
+Fixing boundary conditions.
+Simulation contains lossy material. Solving a complex-valued eigenvalue problem.
+Starting simulation.
+CPU walltime: 3.41457 seconds.
+Simulation completed successfully at: 周五 3月 10 17:24:02 2023
+  + time to run simulation: 3s
+  + time to finalize and save data: 2s

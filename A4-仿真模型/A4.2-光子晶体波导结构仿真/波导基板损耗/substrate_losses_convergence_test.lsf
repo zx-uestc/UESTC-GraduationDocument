@@ -1,0 +1,44 @@
+# select whether or not to run script
+run_sweep = false;
+
+if (run_sweep) {
+    runsweep("convergence test sweep");
+}
+
+# get sweep results
+mode_properties = getsweepresult("convergence test sweep", "modeproperties");
+
+edges_per_wl = mode_properties.getparameter("edges per wavelength");
+poly_order = mode_properties.getparameter("polynomial order");
+real_neff_sim = pinch(real(mode_properties.getattribute("neff")));
+imag_neff_sim = pinch(imag(mode_properties.getattribute("neff")));
+
+real_neff_ref = 2.4123720; # reference value for real part of effective index
+imag_neff_ref = 2.91348e-8; # reference value for imaginary part of effective index
+
+error_real_neff = abs((real_neff_sim - real_neff_ref)/real_neff_ref);
+error_imag_neff = abs((imag_neff_sim - imag_neff_ref)/imag_neff_ref); 
+
+# plot results
+plot(poly_order, error_real_neff,
+     "Polynomial order",
+     "Relative error in real(neff)",
+     "");
+    
+setplot("log10y", true);
+
+legend("Edges per wavelength = 1",
+       "Edges per wavelength = 3",
+       "Edges per wavelength = 5");
+
+plot(poly_order, error_imag_neff,
+     "Polynomial order",
+     "Relative error in imag(neff)",
+     "");
+    
+setplot("log10y", true);
+
+legend("Edges per wavelength = 1",
+       "Edges per wavelength = 3",
+       "Edges per wavelength = 5");
+       

@@ -1,0 +1,16 @@
+Ansys Lumerical 2020 R2.4 Finite Element Eigenmode Solver Version 7.6.2502 (Windows 64bit)
+ expires (month/day/year): 12/31/2035
+using config file: Ansys Licensing set with ANSYSLMD_LICENSE_FILE
+license host: 
+current time: Fri May 19 18:51:59 2023
+Running on host: zx
+Running ldev file: D:\Software\Work\FDTD\bin\feem-engine-msmpi.exe D:/Develop/ProgrammingLearningNotes/UESTC-GraduationDocument/A4-仿真模型/A4.2-光子晶体波导结构仿真/波导基板损耗/waveguide_substrate_losses_backup.ldev -remote
+  ...D:/Develop/ProgrammingLearningNotes/UESTC-GraduationDocument/A4-仿真模型/A4.2-光子晶体波导结构仿真/波导基板损耗/waveguide_substrate_losses_backup.ldev loaded
+Remote execution (remote argument) set to true.
+Generating mesh.
+Mesh generation complete (0s)
+  + vertices: 2569
+  + elements: 4919
+All processes are communicating and ready to proceed to simulation...
+The program terminated due to an error: Exception: failed to open data file D:/Develop/ProgrammingLearningNotes/UESTC-GraduationDocument/A4-仿真模型/A4.2-光子晶体波导结构仿真/波导基板损耗/~#waveguide_substrate_losses_backup.data. Please verify that you have read/write permissions on this file/folder.
+Error: there was an unknown parallel error. The error code is 3031, the process number is 0
